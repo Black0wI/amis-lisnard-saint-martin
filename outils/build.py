@@ -276,7 +276,7 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
   <div class="wrap">
     <div class="hero-text">
       <p class="eyebrow">Présidentielle 2027 · La France, à Saint-Martin</p>
-      <h1>À Saint-Martin, <em>nous soutenons David Lisnard.</em></h1>
+      <h1>Saint-Martin <em>soutient David Lisnard.</em></h1>
       <p class="lead">Nous sommes des habitants de la partie française de l'île. Nous portons ici le projet de Nouvelle Énergie, sur les sujets nationaux comme sur ceux qui comptent pour Saint-Martin : l'eau, l'emploi, le logement et la sécurité à la frontière.</p>
       <div class="cta">
         <a class="btn btn-primary" href="{ADHESION}" rel="noopener">Adhérer à Nouvelle Énergie</a>
