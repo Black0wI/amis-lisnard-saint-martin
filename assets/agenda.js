@@ -6,13 +6,23 @@
   if (!box) return;
   var URL_AGENDA = 'https://www.unenouvelleenergie.fr/agenda.json?978,971,972,977';
   var TZ = 'America/Marigot';
+  var EN = document.documentElement.lang === 'en';
+  var T = EN ? {
+    none: 'No events are announced for now in Saint-Martin, Guadeloupe, Martinique or Saint-Barthélemy in the official calendar.',
+    sheet: 'Official page', signup: 'Sign up on the official website',
+    fail: 'The official calendar could not be loaded. ', see: 'See the calendar on the official website'
+  } : {
+    none: "Aucun événement n'est annoncé pour le moment à Saint-Martin, en Guadeloupe, en Martinique ni à Saint-Barthélemy dans l'agenda officiel.",
+    sheet: 'Fiche officielle', signup: "S'inscrire sur le site officiel",
+    fail: "L'agenda officiel n'a pas pu être chargé. ", see: "Voir l'agenda sur le site officiel"
+  };
 
   function fmtDate(ev) {
     var d = new Date(ev.date);
     if (isNaN(d)) return ev.date;
     var opts = { timeZone: TZ, weekday: 'short', day: 'numeric', month: 'short' };
     if (ev.horaireConfirme) { opts.hour = '2-digit'; opts.minute = '2-digit'; }
-    return d.toLocaleString('fr-FR', opts);
+    return d.toLocaleString(EN ? 'en-GB' : 'fr-FR', opts);
   }
   function el(tag, text, cls) {
     var e = document.createElement(tag);
@@ -32,7 +42,7 @@
       var evs = (data && data.evenements) || [];
       box.textContent = '';
       if (!evs.length) {
-        box.appendChild(el('p', "Aucun événement n'est annoncé pour le moment à Saint-Martin, en Guadeloupe, en Martinique ni à Saint-Barthélemy dans l'agenda officiel."));
+        box.appendChild(el('p', T.none));
         return;
       }
       var ul = el('ul');
@@ -43,8 +53,8 @@
         body.appendChild(el('b', ev.titre));
         if (ev.lieu || ev.ville) body.appendChild(el('p', ev.lieu || ev.ville));
         var p = el('p');
-        if (ev.url) p.appendChild(link(ev.url, 'Fiche officielle'));
-        if (ev.inscription) { p.appendChild(document.createTextNode(' · ')); p.appendChild(link(ev.inscription, "S'inscrire sur le site officiel")); }
+        if (ev.url) p.appendChild(link(ev.url, T.sheet));
+        if (ev.inscription) { p.appendChild(document.createTextNode(' · ')); p.appendChild(link(ev.inscription, T.signup)); }
         body.appendChild(p);
         li.appendChild(body);
         ul.appendChild(li);
@@ -53,8 +63,8 @@
     })
     .catch(function () {
       box.textContent = '';
-      var p = el('p', "L'agenda officiel n'a pas pu être chargé. ");
-      p.appendChild(link('https://www.unenouvelleenergie.fr/agenda/', "Voir l'agenda sur le site officiel"));
+      var p = el('p', T.fail);
+      p.appendChild(link('https://www.unenouvelleenergie.fr/agenda/', T.see));
       box.appendChild(p);
     });
 })();

@@ -253,3 +253,8 @@ section.island .credit a{color:inherit}
 .theme li .here a{color:inherit;font-size:.78rem;opacity:.8}
 .hero .lead-en{margin-top:.2rem;font-size:.95rem;font-style:italic;color:var(--accent);max-width:56ch}
 .hero .lead-en a{font-style:normal;font-weight:600;white-space:nowrap}
+
+/* Sélecteur de langue FR / EN */
+.lang{font-family:var(--head);font-weight:700;font-size:.78rem;letter-spacing:.04em;color:var(--heading);text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:.5rem .65rem;background:var(--card)}
+.lang:hover{border-color:var(--heading)}
+@media (max-width:640px){.lang{padding:.42rem .55rem;font-size:.74rem}}
