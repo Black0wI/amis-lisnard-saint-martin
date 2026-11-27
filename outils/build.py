@@ -847,7 +847,7 @@ PAUSE_BODY = f"""<div class="intro"><div class="wrap narrow">
   <p class="eyebrow">Présidentielle 2027 · Saint-Martin</p>
   <h1>Site en pause</h1>
   <p><a class="btn btn-primary" href="{NE}/" rel="noopener">Site officiel de Nouvelle Énergie</a></p>
-  <p class="fine">Responsable de la publication : Jean-Baptiste Monin, Saint-Martin. Hébergement : GitHub Pages (GitHub, Inc., San Francisco, États-Unis). Aucun cookie, aucune donnée collectée.</p>
+  <p class="fine">Hébergement : GitHub Pages (GitHub, Inc., San Francisco, États-Unis). Aucun cookie, aucune donnée collectée.</p>
 </div></div>"""
 
 
