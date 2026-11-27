@@ -190,3 +190,13 @@ footer p+p{margin-top:.6rem}
 
 footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--tricolore)}
 .quote::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--tricolore)}
+
+/* Portrait de l'accueil (photo libre, créditée) */
+.portrait{margin:0;position:relative;display:grid}
+.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:22px;box-shadow:var(--shadow-lg);background:var(--soft)}
+.portrait .quote{margin:-5.5rem 1.2rem 0;padding:1.4rem 1.5rem 1.2rem;border-radius:16px;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.portrait .quote blockquote{font-size:clamp(1.02rem,1.5vw,1.2rem);margin-top:.6rem}
+.portrait .quote figcaption{margin-top:.8rem;font-size:.8rem}
+.portrait .credit{margin-top:.7rem;font-size:.7rem;color:var(--faint);text-align:right}
+.portrait .credit a{color:inherit}
+@media (max-width:1000px){.portrait{max-width:520px}}

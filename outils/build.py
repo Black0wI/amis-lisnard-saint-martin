@@ -278,11 +278,14 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
       </div>
       <p class="fine">Adhésion sur le site officiel · 20 €, 10 € pour les moins de 25 ans</p>
     </div>
-    <figure class="quote">
-      <p class="qlabel">Ce qu'il défend</p>
-      <blockquote>Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut.</blockquote>
-      <figcaption>David Lisnard<br><a href="{NE}/notre-programme/" rel="noopener">Page programme de Nouvelle Énergie</a></figcaption>
-      <p class="coords">18°04′ N · 63°05′ O · 53 km²</p>
+    <figure class="portrait">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/David_Lisnard_en_2026_%28cropped%29.jpg/900px-David_Lisnard_en_2026_%28cropped%29.jpg" width="900" height="1200" alt="David Lisnard, octobre 2026" fetchpriority="high">
+      <div class="quote">
+        <p class="qlabel">Ce qu'il défend</p>
+        <blockquote>Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut.</blockquote>
+        <figcaption>David Lisnard · <a href="{NE}/notre-programme/" rel="noopener">programme de Nouvelle Énergie</a></figcaption>
+      </div>
+      <p class="credit">Photo : Grégor Sauvagère, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026_(cropped).jpg" rel="noopener">Wikimedia Commons</a></p>
     </figure>
   </div>
 </div>
@@ -458,9 +461,9 @@ PAGES["mentions-legales.html"] = ("Mentions légales", "Mentions légales, hébe
   <p>GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
   <h2>Données personnelles</h2>
   <p>Ce site ne dépose aucun cookie, n'utilise aucun outil de mesure d'audience et ne contient aucun formulaire. Il ne recueille aucune donnée personnelle.</p>
-  <p>Deux services tiers sont appelés lors de la consultation : Google Fonts, pour la police Montserrat, et le fichier public de l'agenda de Nouvelle Énergie sur la page Agir. Comme tout serveur web, ils reçoivent l'adresse IP du visiteur. L'hébergeur GitHub peut conserver des journaux techniques de connexion.</p>
+  <p>Trois services tiers sont appelés lors de la consultation : Google Fonts, pour les polices, Wikimedia Commons, pour la photo de l'accueil, et le fichier public de l'agenda de Nouvelle Énergie sur la page Agir. Comme tout serveur web, ils reçoivent l'adresse IP du visiteur. L'hébergeur GitHub peut conserver des journaux techniques de connexion.</p>
   <h2>Sources et droits</h2>
-  <p>Les citations et mesures reprises du programme de Nouvelle Énergie renvoient chacune à leur page d'origine. Les chiffres sur Saint-Martin proviennent de l'IEDOM et de la Commission européenne. Les textes propres au collectif peuvent être repris librement en citant le site.</p>
+  <p>Les citations et mesures reprises du programme de Nouvelle Énergie renvoient chacune à leur page d'origine. Les chiffres sur Saint-Martin proviennent de l'IEDOM et de la Commission européenne. La photo de David Lisnard en page d'accueil est de Grégor Sauvagère (octobre 2026), publiée sous licence CC BY-SA 4.0 sur Wikimedia Commons. Les textes propres au collectif peuvent être repris librement en citant le site.</p>
   <h2>Règles électorales</h2>
   <p>Le site n'engage aucune dépense et ne recourt à aucune publicité payante. Aucun nouveau contenu de propagande n'y est publié à partir de zéro heure la veille d'un scrutin.</p>
 </div></div></section>
