@@ -31,6 +31,6 @@ L'agenda de la page Agir est lu en direct depuis `https://www.unenouvelleenergie
 
 ## À faire avant d'annoncer le site
 
-- [ ] Compléter le responsable de la publication dans `outils/build.py` (page Mentions légales).
+- [x] Responsable de la publication : Jean-Baptiste Monin.
 - [ ] Déclarer le site à Nouvelle Énergie via leur [formulaire de signalement](https://adherent.unenouvelleenergie.fr/contact/signaler-contenu).
 - [ ] Faire relire les propositions locales par le référent local.
