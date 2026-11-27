@@ -204,7 +204,7 @@ THEMES = [
         "Donner aux préfets les moyens de commander réellement, avec des marges d'action locales sur les effectifs et les équipements.",
         "Ramener les forces de sécurité sur le terrain : 50 % de présence minimum, contre 37 % aujourd'hui.",
         ("Permettre aux communes volontaires d'armer leur police municipale.", f"À Saint-Martin, sans commune, ce rôle revient à la police territoriale de la Collectivité. {s('police-com', 'Source')}"),
-        "Cellules locales anti-stups sous l'autorité du préfet et task forces dédiées en outre-mer.",
+        ("Cellules locales anti-stups sous l'autorité du préfet et task forces dédiées en outre-mer.", f"À Saint-Martin, il s'agit de renforcer le détachement de l'OFAST déjà présent sur l'île. {s('ofast', 'Source')}"),
     ]),
     ("Immigration", "immigration", [
         "Mettre fin à l'automaticité du droit du sol.",
