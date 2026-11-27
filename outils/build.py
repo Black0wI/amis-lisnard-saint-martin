@@ -18,6 +18,8 @@ SRC = {
     "rup": ("https://ec.europa.eu/regional_policy/sources/policy/themes/outermost-regions/rup_2024/regional_fiche_saint_martin.pdf",
             "Commission européenne, fiche régionale Saint-Martin (régions ultrapériphériques)"),
     "senat": ("https://www.senat.fr/rap/l25-514/l25-514-syn.pdf", "Sénat, rapport L25-514 sur Saint-Martin et Sint Maarten (avril 2026)"),
+    "cs-hopital": ("http://www.soualigapost.com/fr/actualite/44322/sant%C3%A9/h%C3%B4pital-le-conseil-de-surveillance-adopte-un-budget-de-52-millions-deuros-pour", "Soualiga Post, conseil de surveillance de l'hôpital (mai 2023)"),
+    "police-com": ("https://www.com-saint-martin.fr/thematiques/securite-et-tranquilite-publique/police-territoriale/role-de-la-police-territoriale", "Collectivité de Saint-Martin, rôle de la police territoriale"),
     "hopital": ("https://www.senat.fr/questions/base/2026/qSEQ26060937G.html", "Sénat, question d'actualité 0937G (juin 2026)"),
     "voeux": ("https://www.com-saint-martin.fr/en/actualites/les-voeux-2026-du-president-louis-mussington", "Collectivité de Saint-Martin, vœux 2026 du président"),
     "axe1": (NE + "/notre-programme/etre-maitre-de-notre-destin/", "Programme, axe 1 « Être maître de notre destin »"),
@@ -163,8 +165,8 @@ PROPS = [
          court="Sans ARS, l'hôpital de Marigot serait piloté au plus près du territoire.",
          constat=f"L'hôpital Louis-Constant-Fleming a connu une grève en juin 2026 et peine à attirer des soignants. {s('hopital', 'Sénat, juin 2026')}",
          programme=f"« Supprimer les ARS, transférer les responsabilités aux préfets et aux élus, redonner aux maires la présidence des conseils d'administration des hôpitaux », et « doubler le nombre d'étudiants en médecine d'ici 2030 ». {s('sante')}",
-         piste="Confier la présidence du conseil d'administration de l'hôpital à un élu de la Collectivité et ouvrir des stages d'internes sur l'île.",
-         qui="L'État."),
+         piste=f"Saint-Martin n'a pas de maire : c'est le président de la Collectivité qui exerce ce rôle. Il préside déjà le conseil de surveillance de l'hôpital (c'était le cas en 2023, {s('cs-hopital', 'Soualiga Post')}). L'apport de la mesure serait donc ailleurs : transférer à ce conseil et au préfet les décisions aujourd'hui prises par l'ARS de Guadeloupe, et ouvrir des stages d'internes sur l'île.",
+         qui="L'État (loi), puis la Collectivité et le préfet."),
     dict(n="École", titre="Deux collèges pilotes de l'autonomie",
          court="Les deux collèges neufs ouverts en 2026 pourraient tester l'autonomie prévue par le programme.",
          constat=f"La Collectivité ouvre deux collèges en 2026, pour 1 500 places. {s('voeux', 'Vœux 2026 de la Collectivité')}",
@@ -224,11 +226,18 @@ THEMES = [
 ]
 
 
+LOCAL = {
+    "securite": f"À Saint-Martin, il n'y a ni commune ni maire : la Collectivité exerce ces compétences et dispose d'une police territoriale, qui tient lieu de police municipale. {s('police-com', 'Collectivité')}",
+    "sante": f"À Saint-Martin, sans maire, l'équivalent est le président de la Collectivité, qui préside déjà le conseil de surveillance de l'hôpital Louis-Constant-Fleming (2023). {s('cs-hopital', 'Soualiga Post')}",
+}
+
+
 def themes(limit=None):
     out = []
     for name, key, items in THEMES:
         li = "".join(f"<li>{x}</li>" for x in items[:limit] if x)
-        out.append(f"""<div class="theme"><h3>{name}</h3><ul>{li}</ul><a class="more" href="{SRC[key][0]}" rel="noopener">Page {name.lower()} du programme →</a></div>""")
+        loc = f'<p class="local"><b>Lecture du collectif pour Saint-Martin</b> {LOCAL[key]}</p>' if key in LOCAL else ""
+        out.append(f"""<div class="theme"><h3>{name}</h3><ul>{li}</ul>{loc}<a class="more" href="{SRC[key][0]}" rel="noopener">Page {name.lower()} du programme →</a></div>""")
     return "\n".join(out)
 
 
