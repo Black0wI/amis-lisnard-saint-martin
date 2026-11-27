@@ -5,6 +5,7 @@ Usage : python3 outils/build.py   (depuis la racine du dépôt)
 Les pages sont écrites à la racine du dépôt. Modifier le contenu ici, puis relancer.
 """
 from pathlib import Path
+import hashlib
 
 ROOT = Path(__file__).resolve().parent.parent
 MAJ = "27 novembre 2026"
@@ -45,6 +46,10 @@ NAV = [
 ]
 
 
+CSS_V = hashlib.sha1((ROOT / "assets/style.css").read_bytes()).hexdigest()[:8]
+JS_V = hashlib.sha1((ROOT / "assets/agenda.js").read_bytes()).hexdigest()[:8]
+
+
 def page(fname, title, description, body, lang="fr", scripts=""):
     nav = "\n".join(
         f'<li><a href="{href}"{" aria-current=\"page\"" if href == fname else ""}{" lang=\"en\"" if href == "english.html" else ""}>{label}</a></li>'
@@ -64,7 +69,7 @@ def page(fname, title, description, body, lang="fr", scripts=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v={CSS_V}">
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
@@ -477,7 +482,7 @@ PAGES["404.html"] = ("Page introuvable", "Cette page n'existe pas.", hero_page(
 def main():
     for fname, (title, desc, body, *rest) in PAGES.items():
         lang = rest[0] if rest else "fr"
-        scripts = '<script src="assets/agenda.js" defer></script>' if fname == "agir.html" else ""
+        scripts = f'<script src="assets/agenda.js?v={JS_V}" defer></script>' if fname == "agir.html" else ""
         (ROOT / fname).write_text(page(fname, title, desc, body, lang, scripts), encoding="utf-8")
         print("écrit", fname)
 
