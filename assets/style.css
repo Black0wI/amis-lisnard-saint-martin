@@ -1,0 +1,142 @@
+/* Les amis de David Lisnard à Saint-Martin
+   Couleurs et typographie relevées sur unenouvelleenergie.fr le 27/11/2026 :
+   Montserrat, marine #1D257A / #0F1752, texte #171B3E, or sable #B0AD85, violet #4A36A3, lavande #E7E5F0. */
+:root{
+  --navy:#1D257A; --navy-deep:#0F1752; --gold:#B0AD85; --violet:#4A36A3; --lavender:#E7E5F0;
+  --bg:#FFFFFF; --fg:#171B3E; --muted:#4A5464; --surface:#F4F3F8; --line:#DCDAE8; --card:#FFFFFF;
+  --link:#1D257A; --accent-text:#4A36A3; --rule:#1D257A; --flag-bg:#0F1752; --flag-fg:#FFFFFF;
+  --font:"Montserrat",Arial,"Helvetica Neue",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0C1131; --fg:#E9E8F2; --muted:#AEB3C6; --surface:#121A45; --line:#2A3270; --card:#141C4C;
+  --link:#CFCCAA; --accent-text:#CFCCAA; --rule:#B0AD85; --flag-bg:#B0AD85; --flag-fg:#0F1752; color-scheme:dark}}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--font);font-size:16px;line-height:1.6;margin:0}
+img{max-width:100%}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--bg);padding:.5rem 1rem;z-index:20}
+.skip:focus{left:1rem}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.narrow{max-width:760px}
+h1,h2,h3{font-weight:700;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem)}
+h3{font-size:1.1rem}
+p{margin:0}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+/* Bandeau d'indépendance : exigé par la charte de partage de Nouvelle Énergie (point 2) */
+.flag{background:var(--flag-bg);color:var(--flag-fg);font-size:.8rem;font-weight:600}
+.flag .wrap{padding-block:.55rem;display:flex;gap:.5rem;align-items:baseline;flex-wrap:wrap}
+.flag strong{font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.flag a{color:inherit}
+
+header.site{background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;text-decoration:none;color:var(--fg);line-height:1.15}
+.brand b{font-size:1rem;font-weight:800}
+.brand span{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.1rem;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:.85rem;font-weight:600;color:var(--fg);padding-block:.2rem;border-bottom:2px solid transparent}
+nav a:hover{color:var(--accent-text)}
+nav a[aria-current="page"]{border-bottom-color:var(--gold)}
+
+/* Bandeau marine (accueil et en-têtes de page) */
+.hero{background-color:var(--navy);background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.045) 0 70px,transparent 70px 140px),linear-gradient(160deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff}
+.hero .wrap{padding-block:3.5rem 3rem;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:2.5rem;align-items:end}
+.hero.page .wrap{display:block;padding-block:2.6rem 2.4rem}
+.hero .eyebrow{color:rgba(255,255,255,.8)}
+.hero h1{color:var(--gold);font-size:clamp(2.1rem,5.2vw,3.6rem);margin:.6rem 0 1.1rem}
+.hero.page h1{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:.8rem}
+.hero p.lead{font-size:1.08rem;max-width:60ch;color:rgba(255,255,255,.92)}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.btn{display:inline-block;padding:.85rem 1.3rem;border-radius:12px;font-weight:700;font-size:.95rem;text-decoration:none;border:2px solid transparent}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-ghost{border-color:#fff;color:#fff}
+.btn small{display:block;font-weight:500;font-size:.72rem;opacity:.85}
+.quote{border-left:3px solid var(--gold);padding-left:1.1rem;margin:0}
+.quote p{font-size:1.15rem;font-weight:600;line-height:1.45}
+.quote cite{display:block;margin-top:.7rem;font-style:normal;font-size:.8rem;color:rgba(255,255,255,.75)}
+.quote cite a{color:inherit}
+.coords{margin-top:1.4rem;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);font-variant-numeric:tabular-nums}
+
+section{padding-block:3.5rem}
+section.alt{background:var(--surface)}
+.head{display:grid;gap:.6rem;margin-bottom:2rem;max-width:68ch}
+.head p{color:var(--muted)}
+.more-link{margin-top:1.5rem;font-weight:700}
+
+.tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.tri div{border-top:4px solid var(--rule);padding-top:1rem}
+.tri h3{font-size:1.4rem;margin-bottom:.4rem}
+.tri p{color:var(--muted);font-size:.95rem}
+
+.status{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--lavender);color:var(--navy);padding:.25rem .6rem;border-radius:999px}
+.props{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.prop{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.3rem 1.3rem 1.1rem;display:grid;gap:.55rem;align-content:start}
+.prop .n{font-size:.8rem;font-weight:800;color:var(--accent-text)}
+.prop p{font-size:.93rem}
+.prop dl{margin:.3rem 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.25rem .7rem;font-size:.8rem;color:var(--muted)}
+.prop dt{font-weight:700;color:var(--fg)}
+.prop dd{margin:0}
+
+/* Fiche détaillée (page Saint-Martin d'abord) */
+.fiche{border-top:1px solid var(--line);padding-block:2rem;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:1.5rem}
+.fiche:first-of-type{border-top:0;padding-top:0}
+.fiche .n{font-size:.8rem;font-weight:800;color:var(--accent-text);text-transform:uppercase;letter-spacing:.08em}
+.fiche h2{font-size:1.4rem;margin-top:.3rem}
+.fiche dl{margin:0;display:grid;gap:.9rem}
+.fiche dt{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fiche dd{margin:.15rem 0 0}
+.src{font-size:.8rem;color:var(--muted)}
+
+.themes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem}
+.themes.wide{grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}
+.theme{display:grid;gap:.7rem;align-content:start}
+.theme ul{margin:0;padding-left:1.1rem;font-size:.95rem;display:grid;gap:.4rem}
+.theme a.more{font-size:.82rem;font-weight:700}
+
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.92rem}
+th,td{text-align:left;padding:.8rem 1rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td.fig{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{font-size:.8rem;color:var(--muted);margin-top:.8rem}
+
+.act{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.act a.tile{display:grid;gap:.4rem;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.2rem;align-content:start}
+.act a.tile:hover{border-color:var(--accent-text)}
+.act .tile span{font-size:.86rem;color:var(--muted)}
+.act .tile i{font-style:normal;font-size:.78rem;font-weight:700;color:var(--link)}
+
+.agenda{margin-top:1.5rem;border:1px solid var(--line);border-radius:12px;padding:1.2rem;display:grid;gap:.8rem;background:var(--card)}
+.agenda ul{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.agenda li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1rem;align-items:start;border-top:1px solid var(--line);padding-top:.8rem}
+.agenda .date{font-weight:800;font-variant-numeric:tabular-nums;color:var(--accent-text);min-width:5.5rem}
+.agenda p{font-size:.9rem;color:var(--muted)}
+
+.prose{display:grid;gap:1rem;max-width:68ch}
+.prose h2{font-size:1.4rem;margin-top:1rem}
+.prose ul{margin:0;padding-left:1.2rem;display:grid;gap:.4rem}
+
+.en{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:start}
+
+footer{background:var(--navy-deep);color:rgba(255,255,255,.85);font-size:.85rem}
+footer .wrap{padding-block:2.5rem;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:2rem}
+footer a{color:var(--gold)}
+footer h3{color:#fff;font-size:.9rem;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.08em}
+footer p+p{margin-top:.5rem}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .themes,.act{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  .tri,.props,.themes,.themes.wide,.act,.en,.fiche,footer .wrap{grid-template-columns:1fr}
+  nav ul{gap:.8rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
