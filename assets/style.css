@@ -191,12 +191,27 @@ footer p+p{margin-top:.6rem}
 footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--tricolore)}
 .quote::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--tricolore)}
 
-/* Portrait de l'accueil (photo libre, créditée) */
-.portrait{margin:0;position:relative;display:grid}
-.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:22px;box-shadow:var(--shadow-lg);background:var(--soft)}
-.portrait .quote{margin:-5.5rem 1.2rem 0;padding:1.4rem 1.5rem 1.2rem;border-radius:16px;background:color-mix(in srgb,var(--card) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.portrait .quote blockquote{font-size:clamp(1.02rem,1.5vw,1.2rem);margin-top:.6rem}
-.portrait .quote figcaption{margin-top:.8rem;font-size:.8rem}
-.portrait .credit{margin-top:.7rem;font-size:.7rem;color:var(--faint);text-align:right}
-.portrait .credit a{color:inherit}
-@media (max-width:1000px){.portrait{max-width:520px}}
+/* Accueil : photo de David Lisnard en fond, fondue dans la couleur de la page */
+.hero-photo .hero-bg{position:absolute;inset:0 0 0 auto;width:58%;z-index:-1}
+.hero-photo .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%,#000 100%),linear-gradient(0deg,transparent 0%,#000 22%);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 38%,#000 100%);
+  filter:saturate(.95)}
+.hero-photo .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(246,245,250,.0) 45%),linear-gradient(0deg,var(--bg) 0%,rgba(246,245,250,0) 30%),linear-gradient(180deg,rgba(29,37,122,.10),rgba(74,54,163,.06))}
+.hero-photo::before{display:none}
+.hero-photo .wrap{min-height:640px;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:end}
+.hero-photo .hero-text{align-self:center}
+.hero-photo .quote{justify-self:end;max-width:380px;padding:1.4rem 1.5rem 1.2rem;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.hero-photo .quote blockquote{font-size:1.1rem;margin-top:.6rem}
+.hero-photo .quote figcaption{margin-top:.8rem;font-size:.8rem}
+.hero .credit{position:absolute;right:max(20px,env(safe-area-inset-right,0px));bottom:.6rem;margin:0;font-size:.68rem;color:var(--faint)}
+.hero .credit a{color:inherit}
+@media (max-width:1000px){
+  .hero-photo .hero-bg{position:relative;inset:auto;width:100%;height:420px;order:-1}
+  .hero-photo{display:flex;flex-direction:column}
+  .hero-photo .hero-bg img{-webkit-mask-image:linear-gradient(0deg,transparent 0%,#000 35%);mask-image:linear-gradient(0deg,transparent 0%,#000 35%)}
+  .hero-photo .hero-bg::after{background:linear-gradient(0deg,var(--bg) 0%,rgba(246,245,250,0) 40%)}
+  .hero-photo .wrap{min-height:0;margin-top:-6rem;position:relative;padding-top:0}
+  .hero-photo .quote{justify-self:stretch;max-width:none}
+  .hero .credit{position:static;padding:0 20px 1rem;text-align:right}
+}

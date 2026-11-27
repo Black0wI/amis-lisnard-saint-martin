@@ -266,7 +266,8 @@ ACT = f"""<div class="act">
 PAGES = {}
 
 PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard et Nouvelle Énergie, animé par des habitants de Saint-Martin (Antilles).", f"""
-<div class="hero">
+<div class="hero hero-photo">
+  <div class="hero-bg" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/David_Lisnard_en_2026_%28cropped%29.jpg/960px-David_Lisnard_en_2026_%28cropped%29.jpg" width="960" height="1280" alt="" fetchpriority="high"></div>
   <div class="wrap">
     <div class="hero-text">
       <p class="eyebrow">Présidentielle 2027 · La France, depuis Saint-Martin</p>
@@ -278,16 +279,13 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
       </div>
       <p class="fine">Adhésion sur le site officiel · 20 €, 10 € pour les moins de 25 ans</p>
     </div>
-    <figure class="portrait">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/David_Lisnard_en_2026_%28cropped%29.jpg/960px-David_Lisnard_en_2026_%28cropped%29.jpg" width="960" height="1280" alt="David Lisnard, octobre 2026" fetchpriority="high">
-      <div class="quote">
-        <p class="qlabel">Ce qu'il défend</p>
-        <blockquote>Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut.</blockquote>
-        <figcaption>David Lisnard · <a href="{NE}/notre-programme/" rel="noopener">programme de Nouvelle Énergie</a></figcaption>
-      </div>
-      <p class="credit">Photo : Grégor Sauvagère, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026_(cropped).jpg" rel="noopener">Wikimedia Commons</a></p>
+    <figure class="quote">
+      <p class="qlabel">Ce qu'il défend</p>
+      <blockquote>Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut.</blockquote>
+      <figcaption>David Lisnard · <a href="{NE}/notre-programme/" rel="noopener">programme de Nouvelle Énergie</a></figcaption>
     </figure>
   </div>
+  <p class="credit">Photo de David Lisnard : Grégor Sauvagère, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026_(cropped).jpg" rel="noopener">Wikimedia Commons</a></p>
 </div>
 
 <section id="pourquoi">
