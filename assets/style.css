@@ -217,7 +217,7 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;back
 }
 
 /* Citation sous le héros, hors de la photo */
-.quote-band{position:relative;z-index:1;margin-top:-2.5rem}
+.quote-band{position:relative;z-index:1;margin-top:1.2rem}
 .quote-band .quote{max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.4rem 2rem;align-items:baseline;padding:1.8rem 2.2rem}
 .quote-band .qlabel{grid-row:span 2}
 .quote-band blockquote{margin:0;font-size:clamp(1.1rem,1.8vw,1.35rem)}
