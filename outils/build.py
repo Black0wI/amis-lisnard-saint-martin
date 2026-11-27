@@ -63,23 +63,24 @@ def page(fname, title, description, body, lang="fr", scripts=""):
 <meta name="theme-color" content="#1D257A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
 <div class="flag" role="note">
   <div class="wrap">
-    <strong>Site non officiel</strong>
-    <span>Initiative indépendante de soutien à David Lisnard et Nouvelle Énergie : non gérée ni validée par le mouvement. <a href="{NE}/" rel="noopener">Site officiel de Nouvelle Énergie</a></span>
+    <span><strong>Site non officiel</strong> · Initiative indépendante de soutien à David Lisnard et Nouvelle Énergie : non gérée ni validée par le mouvement.</span>
+    <a href="{NE}/" rel="noopener">Site officiel de Nouvelle Énergie</a>
   </div>
 </div>
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="index.html"><b>Les amis de David Lisnard à Saint-Martin</b><span>Collectif local de soutien · 978</span></a>
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span><span class="bt"><b>Les amis de David Lisnard</b><span>à Saint-Martin</span></span></a>
     <nav aria-label="Navigation principale"><ul>
 {nav}
     </ul></nav>
+    <a class="pill" href="{ADHESION}" rel="noopener">Adhérer</a>
   </div>
 </header>
 <main id="contenu">
@@ -106,7 +107,7 @@ def page(fname, title, description, body, lang="fr", scripts=""):
 
 
 def hero_page(eyebrow, h1, lead):
-    return f"""<div class="hero page"><div class="wrap">
+    return f"""<div class="intro"><div class="wrap">
   <p class="eyebrow">{eyebrow}</p>
   <h1>{h1}</h1>
   <p class="lead">{lead}</p>
@@ -125,7 +126,7 @@ PROPS = [
          qui="L'État, par une révision de la loi organique statutaire."),
     dict(n="Eau", titre="L'eau potable, chantier prioritaire",
          court="L'eau coûte plus de deux fois la moyenne nationale et près d'un tiers se perd dans le réseau.",
-         constat=f"100 % de l'eau vient du dessalement. Elle coûtait 5,51 €/m³ en 2022, contre 2,11 €/m³ en moyenne nationale en 2021, et environ 30 % se perd dans les fuites du réseau. {s('rup', 'Fiche RUP')}",
+         constat=f"L'eau coûtait 5,51 €/m³ en 2022, contre 2,11 €/m³ en moyenne nationale en 2021, et environ 30 % se perd dans les fuites du réseau. {s('rup', 'Fiche RUP')}",
          programme=f"Le programme national ne contient pas de mesure dédiée à l'eau. La piste s'appuie sur la décentralisation et l'allègement normatif qu'il défend. {s('axe3')}",
          piste="Faire du réseau et du dessalement un chantier prioritaire, avec un objectif public de réduction des pertes et un suivi publié chaque année.",
          qui="La Collectivité et son établissement des eaux, avec le soutien de l'État."),
@@ -171,7 +172,7 @@ PROPS = [
 def cards():
     out = []
     for i, p in enumerate(PROPS, 1):
-        out.append(f"""<article class="prop"><span class="n">{i} · {p['n']}</span><h3>{p['titre']}</h3><p>{p['court']}</p><dl><dt>Qui décide</dt><dd>{p['qui']}</dd></dl></article>""")
+        out.append(f"""<a class="prop" href="saint-martin.html#p{i}"><span class="num">{i}</span><span class="tag">{p['n']}</span><h3>{p['titre']}</h3><p>{p['court']}</p><span class="who">Qui décide · {p['qui']}</span></a>""")
     return "\n".join(out)
 
 
@@ -179,7 +180,7 @@ def fiches():
     out = []
     for i, p in enumerate(PROPS, 1):
         out.append(f"""<article class="fiche" id="p{i}">
-  <div><span class="n">{i} · {p['n']}</span><h2>{p['titre']}</h2></div>
+  <div><span class="num">{i}</span><span class="tag">{p['n']}</span><h2>{p['titre']}</h2></div>
   <dl>
     <div><dt>Le constat</dt><dd>{p['constat']}</dd></div>
     <div><dt>Ce que dit le programme</dt><dd>{p['programme']}</dd></div>
@@ -267,18 +268,20 @@ PAGES = {}
 PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard et Nouvelle Énergie, animé par des habitants de Saint-Martin (Antilles).", f"""
 <div class="hero">
   <div class="wrap">
-    <div>
+    <div class="hero-text">
       <p class="eyebrow">Présidentielle 2027 · Saint-Martin, Antilles</p>
-      <h1>Depuis Saint-Martin, nous soutenons David Lisnard.</h1>
+      <h1>Depuis Saint-Martin, <em>nous soutenons David Lisnard.</em></h1>
       <p class="lead">Nous sommes des habitants de la partie française de l'île. Nous portons ici le projet de Nouvelle Énergie, sur les sujets nationaux comme sur ceux qui comptent pour Saint-Martin : l'eau, l'emploi, le logement et la sécurité à la frontière.</p>
       <div class="cta">
-        <a class="btn btn-gold" href="{ADHESION}" rel="noopener">Adhérer à Nouvelle Énergie<small>sur le site officiel · 20 €, 10 € moins de 25 ans</small></a>
-        <a class="btn btn-ghost" href="{NE}/notre-programme/" rel="noopener">Lire le programme officiel</a>
+        <a class="btn btn-primary" href="{ADHESION}" rel="noopener">Adhérer à Nouvelle Énergie</a>
+        <a class="btn btn-line" href="saint-martin.html">Nos propositions pour l'île</a>
       </div>
+      <p class="fine">Adhésion sur le site officiel · 20 €, 10 € pour les moins de 25 ans</p>
     </div>
     <figure class="quote">
-      <p>« Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut. »</p>
-      <cite>David Lisnard · cité sur <a href="{NE}/notre-programme/" rel="noopener">la page programme de Nouvelle Énergie</a></cite>
+      <p class="qlabel">Ce qu'il défend</p>
+      <blockquote>Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut.</blockquote>
+      <figcaption>David Lisnard<br><a href="{NE}/notre-programme/" rel="noopener">Page programme de Nouvelle Énergie</a></figcaption>
       <p class="coords">18°04′ N · 63°05′ O · 53 km²</p>
     </figure>
   </div>
@@ -324,6 +327,22 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
 {themes(3)}
     </div>
     <p class="more-link"><a href="regalien.html">Voir toutes les mesures →</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">L'île en chiffres</p>
+      <h2>Chiffres clés</h2>
+    </div>
+    <div class="keys">
+      <div><b>27 %</b><span>de chômage au recensement de 2023</span></div>
+      <div><b>5,51 €</b><span>le mètre cube d'eau en 2022, plus de deux fois la moyenne nationale</span></div>
+      <div><b>28,3 %</b><span>de ménages propriétaires en 2020, contre 63,6 % en moyenne nationale</span></div>
+      <div><b>95,5 %</b><span>des 2,6 millions de visiteurs de l'île accueillis côté néerlandais en 2025</span></div>
+    </div>
+    <p class="more-link"><a href="chiffres.html">Tous les chiffres et leurs sources →</a></p>
   </div>
 </section>
 
