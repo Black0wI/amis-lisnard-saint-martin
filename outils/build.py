@@ -20,6 +20,7 @@ SRC = {
     "senat": ("https://www.senat.fr/rap/l25-514/l25-514-syn.pdf", "Sénat, rapport L25-514 sur Saint-Martin et Sint Maarten (avril 2026)"),
     "cs-hopital": ("http://www.soualigapost.com/fr/actualite/44322/sant%C3%A9/h%C3%B4pital-le-conseil-de-surveillance-adopte-un-budget-de-52-millions-deuros-pour", "Soualiga Post, conseil de surveillance de l'hôpital (mai 2023)"),
     "police-com": ("https://www.com-saint-martin.fr/thematiques/securite-et-tranquilite-publique/police-territoriale/role-de-la-police-territoriale", "Collectivité de Saint-Martin, rôle de la police territoriale"),
+    "ofast": ("https://outremers360.com/bassin-atlantique-appli/lutte-antidrogue-lofast-renforce-sa-presence-et-ses-moyens-aux-antilles", "Outremers360, l'OFAST renforce sa présence aux Antilles (novembre 2025)"),
     "hopital": ("https://www.senat.fr/questions/base/2026/qSEQ26060937G.html", "Sénat, question d'actualité 0937G (juin 2026)"),
     "voeux": ("https://www.com-saint-martin.fr/en/actualites/les-voeux-2026-du-president-louis-mussington", "Collectivité de Saint-Martin, vœux 2026 du président"),
     "axe1": (NE + "/notre-programme/etre-maitre-de-notre-destin/", "Programme, axe 1 « Être maître de notre destin »"),
@@ -149,11 +150,11 @@ PROPS = [
          programme=f"Le programme prévoit de pouvoir « débloquer une part capitalisée » de l'épargne retraite « pour l'achat de la résidence principale », et sort la politique du logement du « seul logement social ». {s('axe2')}",
          piste="Accompagner les familles résidentes vers la propriété et remettre sur le marché les logements vacants, en lien avec le Programme local de l'habitat 2025-2030.",
          qui="La Collectivité (urbanisme, habitat) et l'État (épargne, aides)."),
-    dict(n="Sécurité", titre="Une task force anti-stups implantée sur l'île",
-         court="Le programme prévoit des « task forces dédiées en outre-mer » : nous demandons qu'une soit basée à Saint-Martin.",
-         constat=f"Le Sénat décrit une frontière ouverte avec Sint Maarten, au cadre juridique lacunaire, avec des enjeux de sécurité. {s('senat', 'Sénat, 2026')}",
+    dict(n="Sécurité", titre="Renforcer l'action de l'OFAST sur l'île",
+         court="L'Office anti-stupéfiants a déjà un détachement à Saint-Martin : la « task force dédiée » du programme doit venir le renforcer.",
+         constat=f"Le Sénat décrit une frontière ouverte avec Sint Maarten, au cadre juridique lacunaire, avec des enjeux de sécurité. {s('senat', 'Sénat, 2026')} L'OFAST dispose d'un détachement à Saint-Martin, renforcé en 2025 avec des policiers spécialisés. {s('ofast', 'Outremers360, 2025')}",
          programme=f"Contre le narcotrafic : « cellules locales anti-stups sous autorité du préfet », « coopération internationale renforcée, task forces dédiées en outre-mer ». {s('securite')}",
-         piste="Implanter à Saint-Martin une cellule anti-stups permanente et renforcer la coopération avec la police de Sint Maarten.",
+         piste="Ne pas créer une structure de plus : renforcer durablement le détachement de l'OFAST déjà présent sur l'île, l'inscrire dans la cellule locale prévue sous l'autorité du préfet, et renforcer la coopération avec la police de Sint Maarten.",
          qui="L'État, avec les Pays-Bas pour la coopération."),
     dict(n="Frontière", titre="Appliquer la fermeté migratoire avec discernement",
          court="Priorité à l'éloignement des étrangers condamnés et au respect des conditions d'accès aux prestations.",
@@ -463,7 +464,7 @@ PAGES["english.html"] = ("English", "Independent supporters' site for David Lisn
       <li>Water as a priority: drinking water alone costs more than twice the national average, before sanitation and fixed charges.</li>
       <li>A priority hiring zone, with 27% unemployment in 2023.</li>
       <li>Helping families own their home: only 28% do, against 64% nationally, and Irma damaged 95% of the island's buildings in 2017.</li>
-      <li>A permanent anti-drug task force based on the island.</li>
+      <li>Stronger means for the national anti-drug office (OFAST), which already has a unit on the island.</li>
     </ul>
     <p>These are proposals from our local group, not commitments from the candidate. <a href="saint-martin.html" lang="fr">Read them in French</a>.</p>
     <p><b>Make sure you are registered to vote</b> on <a href="https://www.service-public.gouv.fr/particuliers/vosdroits/R16396" rel="noopener">service-public.gouv.fr</a>.</p>
