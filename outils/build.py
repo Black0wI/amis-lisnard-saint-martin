@@ -272,7 +272,7 @@ PAGES = {}
 
 PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard et Nouvelle Énergie, animé par des habitants de Saint-Martin (Antilles).", f"""
 <div class="hero hero-photo">
-  <div class="hero-bg" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/David_Lisnard_en_2026_%28cropped%29.jpg/960px-David_Lisnard_en_2026_%28cropped%29.jpg" width="960" height="1280" alt="" fetchpriority="high"></div>
+  <div class="hero-bg" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/David_Lisnard_en_2026.jpg/960px-David_Lisnard_en_2026.jpg" width="960" height="1280" alt="" fetchpriority="high"></div>
   <div class="wrap">
     <div class="hero-text">
       <p class="eyebrow">Présidentielle 2027 · La France, à Saint-Martin</p>
@@ -285,7 +285,7 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
       <p class="fine">Adhésion sur le site officiel · 20 €, 10 € pour les moins de 25 ans</p>
     </div>
   </div>
-  <p class="credit">Photo de David Lisnard : Grégor Sauvagère, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026_(cropped).jpg" rel="noopener">Wikimedia Commons</a></p>
+  <p class="credit">Photo de David Lisnard : Grégor Sauvagère, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026.jpg" rel="noopener">Wikimedia Commons</a></p>
 </div>
 
 <div class="quote-band"><div class="wrap">
