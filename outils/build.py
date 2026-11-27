@@ -108,7 +108,7 @@ CSS_V = hashlib.sha1((ROOT / "assets/style.css").read_bytes()).hexdigest()[:8]
 JS_V = hashlib.sha1((ROOT / "assets/agenda.js").read_bytes()).hexdigest()[:8]
 
 
-SITE = "https://black0wi.github.io/amis-lisnard-saint-martin/"
+SITE = "https://davidlisnard978.fr/"
 
 
 def page(fname, title, description, body, lang="fr", scripts="", fixed_base=None):
@@ -833,7 +833,7 @@ PAGES_EN["mentions-legales.html"] = ("Legal notice", "Legal notice, hosting and 
 
 REDIRECT = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><title>Les amis de David Lisnard à Saint-Martin</title>
-<meta http-equiv="refresh" content="0; url=en/index.html"><link rel="canonical" href="https://black0wi.github.io/amis-lisnard-saint-martin/en/">
+<meta http-equiv="refresh" content="0; url=en/index.html"><link rel="canonical" href="https://davidlisnard978.fr/en/">
 </head><body><p><a href="en/index.html">English version</a></p></body></html>
 """
 
@@ -844,7 +844,7 @@ def main():
         for fname, (title, desc, body, *rest) in pages.items():
             base = "../" if lang == "en" else ""
             scripts = f'<script src="{base}assets/agenda.js?v={JS_V}" defer></script>' if fname == "agir.html" else ""
-            fixed = "/amis-lisnard-saint-martin/" if fname == "404.html" else None
+            fixed = "/" if fname == "404.html" else None
             (outdir / fname).write_text(page(fname, title, desc, body, lang, scripts, fixed), encoding="utf-8")
             print("écrit", ("en/" if lang == "en" else "") + fname)
     (ROOT / "english.html").write_text(REDIRECT, encoding="utf-8")

@@ -4,7 +4,7 @@ Site statique de soutien indépendant à David Lisnard et Nouvelle Énergie, ani
 
 > Initiative indépendante de soutien à David Lisnard et Nouvelle Énergie : non gérée ni validée par le mouvement.
 
-Adresse : https://black0wi.github.io/amis-lisnard-saint-martin/
+Adresse : https://davidlisnard978.fr/ (domaine Route 53 ; ancienne adresse : https://black0wi.github.io/amis-lisnard-saint-martin/)
 
 ## Règles suivies
 
