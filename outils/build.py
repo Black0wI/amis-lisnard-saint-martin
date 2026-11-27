@@ -275,8 +275,8 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
   <div class="hero-bg" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/David_Lisnard_en_2026_%28cropped%29.jpg/960px-David_Lisnard_en_2026_%28cropped%29.jpg" width="960" height="1280" alt="" fetchpriority="high"></div>
   <div class="wrap">
     <div class="hero-text">
-      <p class="eyebrow">Présidentielle 2027 · La France, depuis Saint-Martin</p>
-      <h1>Depuis Saint-Martin, <em>nous soutenons David Lisnard.</em></h1>
+      <p class="eyebrow">Présidentielle 2027 · La France, à Saint-Martin</p>
+      <h1>À Saint-Martin, <em>nous soutenons David Lisnard.</em></h1>
       <p class="lead">Nous sommes des habitants de la partie française de l'île. Nous portons ici le projet de Nouvelle Énergie, sur les sujets nationaux comme sur ceux qui comptent pour Saint-Martin : l'eau, l'emploi, le logement et la sécurité à la frontière.</p>
       <div class="cta">
         <a class="btn btn-primary" href="{ADHESION}" rel="noopener">Adhérer à Nouvelle Énergie</a>
@@ -408,7 +408,7 @@ PAGES["chiffres.html"] = ("L'île en chiffres", "Les principaux chiffres économ
 """)
 
 PAGES["agir.html"] = ("Agir", "S'inscrire sur les listes électorales, préparer une procuration, adhérer et suivre l'agenda de Nouvelle Énergie aux Antilles.", hero_page(
-    "Agir", "Agir depuis Saint-Martin",
+    "Agir", "Agir à Saint-Martin",
     "Ce site ne recueille aucune donnée. Pour adhérer, s'inscrire ou participer à un événement, chaque lien mène au service officiel concerné.") + f"""
 <section><div class="wrap">
 {ACT}
