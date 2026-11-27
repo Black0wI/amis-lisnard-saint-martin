@@ -838,7 +838,58 @@ REDIRECT = """<!doctype html>
 """
 
 
+# Pause : en attente de validation par l'équipe de campagne (27/11/2026).
+# Pour remettre le site complet en ligne : PAUSE = False, puis python3 outils/build.py
+# (le site complet est aussi conservé sur la branche site-complet).
+PAUSE = True
+
+PAUSE_BODY = f"""<div class="intro"><div class="wrap narrow">
+  <p class="eyebrow">Présidentielle 2027 · Saint-Martin</p>
+  <h1>Site en pause</h1>
+  <p class="lead">Ce site de soutien est en cours de relecture par l'équipe de campagne de Nouvelle Énergie. Il sera remis en ligne après sa validation.</p>
+  <p class="lead" lang="en">This supporters' site is being reviewed by the Nouvelle Énergie campaign team. It will be back online once approved.</p>
+  <p><a class="btn btn-primary" href="{NE}/" rel="noopener">Site officiel de Nouvelle Énergie</a></p>
+</div></div>"""
+
+
+def pause_page():
+    return f"""<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="/">
+<title>Les amis de David Lisnard à Saint-Martin</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1D257A">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css?v={CSS_V}">
+</head>
+<body>
+<div class="flag" role="note"><div class="wrap"><span><strong>Site non officiel</strong> · {BANNER_FR}</span></div></div>
+<header class="site"><div class="wrap"><span class="brand"><span class="dot" aria-hidden="true"></span><span class="bt"><b>Les amis de David Lisnard</b><span>à Saint-Martin</span></span></span></div></header>
+<main id="contenu">
+{PAUSE_BODY}
+</main>
+</body>
+</html>
+"""
+
+
+def main_pause():
+    html = pause_page()
+    for d in (ROOT, ROOT / "en"):
+        for f in d.glob("*.html"):
+            f.unlink()
+    (ROOT / "en").mkdir(exist_ok=True)
+    for f in (ROOT / "index.html", ROOT / "404.html", ROOT / "en" / "index.html"):
+        f.write_text(html, encoding="utf-8")
+        print("pause :", f.relative_to(ROOT))
+
+
 def main():
+    if PAUSE:
+        return main_pause()
     (ROOT / "en").mkdir(exist_ok=True)
     for lang, pages, outdir in (("fr", PAGES, ROOT), ("en", PAGES_EN, ROOT / "en")):
         for fname, (title, desc, body, *rest) in pages.items():
