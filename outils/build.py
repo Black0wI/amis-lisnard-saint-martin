@@ -203,7 +203,7 @@ THEMES = [
     ("Sécurité", "securite", [
         "Donner aux préfets les moyens de commander réellement, avec des marges d'action locales sur les effectifs et les équipements.",
         "Ramener les forces de sécurité sur le terrain : 50 % de présence minimum, contre 37 % aujourd'hui.",
-        "Permettre aux communes volontaires d'armer leur police municipale.",
+        ("Permettre aux communes volontaires d'armer leur police municipale.", f"À Saint-Martin, sans commune, ce rôle revient à la police territoriale de la Collectivité. {s('police-com', 'Source')}"),
         "Cellules locales anti-stups sous l'autorité du préfet et task forces dédiées en outre-mer.",
     ]),
     ("Immigration", "immigration", [
@@ -214,7 +214,7 @@ THEMES = [
     ]),
     ("Santé", "sante", [
         "Supprimer les ARS et transférer leurs responsabilités aux préfets et aux élus.",
-        "Redonner aux maires la présidence des conseils d'administration des hôpitaux.",
+        ("Redonner aux maires la présidence des conseils d'administration des hôpitaux.", f"À Saint-Martin, sans maire, c'est le président de la Collectivité : il préside déjà le conseil de surveillance de l'hôpital Louis-Constant-Fleming (2023). {s('cs-hopital', 'Source')}"),
         "Mieux rembourser les actes dans les zones sous-dotées.",
         "Doubler le nombre d'étudiants en médecine d'ici 2030.",
     ]),
@@ -227,18 +227,11 @@ THEMES = [
 ]
 
 
-LOCAL = {
-    "securite": f"À Saint-Martin, il n'y a ni commune ni maire : la Collectivité exerce ces compétences et dispose d'une police territoriale, qui tient lieu de police municipale. {s('police-com', 'Collectivité')}",
-    "sante": f"À Saint-Martin, sans maire, l'équivalent est le président de la Collectivité, qui préside déjà le conseil de surveillance de l'hôpital Louis-Constant-Fleming (2023). {s('cs-hopital', 'Soualiga Post')}",
-}
-
-
 def themes(limit=None):
     out = []
     for name, key, items in THEMES:
-        li = "".join(f"<li>{x}</li>" for x in items[:limit] if x)
-        loc = f'<p class="local"><b>Lecture du collectif pour Saint-Martin</b> {LOCAL[key]}</p>' if key in LOCAL else ""
-        out.append(f"""<div class="theme"><h3>{name}</h3><ul>{li}</ul>{loc}<a class="more" href="{SRC[key][0]}" rel="noopener">Page {name.lower()} du programme →</a></div>""")
+        li = "".join(f'<li>{x[0]}<span class="here">{x[1]}</span></li>' if isinstance(x, tuple) else f"<li>{x}</li>" for x in items[:limit] if x)
+        out.append(f"""<div class="theme"><h3>{name}</h3><ul>{li}</ul><a class="more" href="{SRC[key][0]}" rel="noopener">Page {name.lower()} du programme →</a></div>""")
     return "\n".join(out)
 
 
