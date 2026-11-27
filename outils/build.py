@@ -286,7 +286,8 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
     <div class="hero-text">
       <p class="eyebrow">Présidentielle 2027 · La France, à Saint-Martin</p>
       <h1>Saint-Martin <em>soutient David Lisnard.</em></h1>
-      <p class="lead">Nous sommes des habitants de la partie française de l'île. Nous portons ici le projet de Nouvelle Énergie, sur les sujets nationaux comme sur ceux qui comptent pour Saint-Martin : l'eau, l'emploi, le logement et la sécurité à la frontière.</p>
+      <p class="lead">Nous vivons et travaillons à Saint-Martin, de Marigot à Grand-Case, de Quartier-d'Orléans à Sandy Ground. Nous soutenons David Lisnard parce que ses priorités rejoignent celles des familles de l'île : la vie chère, du travail pour nos jeunes, un toit après Irma, la sécurité dans nos quartiers.</p>
+      <p class="lead-en" lang="en">We live here, we work here, and we want a France that delivers for Saint-Martin. <a href="english.html">Read it in English →</a></p>
       <div class="cta">
         <a class="btn btn-primary" href="{ADHESION}" rel="noopener">Adhérer à Nouvelle Énergie</a>
         <a class="btn btn-line" href="saint-martin.html">Nos propositions pour l'île</a>
@@ -326,7 +327,7 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
     <div class="head">
       <p class="eyebrow">Saint-Martin d'abord</p>
       <h2>Huit propositions pour l'île</h2>
-      <p>Le programme national n'a pas de volet consacré à l'outre-mer. Ces pistes sont celles de notre collectif : chacune part d'un constat sourcé, s'appuie sur une mesure du programme et dit qui décide. <span class="status">Pistes du collectif, pas des engagements du candidat</span></p>
+      <p>Le programme national n'a pas de volet consacré à l'outre-mer. Nous sommes donc partis de ce que vivent les familles d'ici : le prix de l'eau, le chômage, le logement, la sécurité. Ces pistes sont celles de notre collectif : chacune part d'un constat sourcé, s'appuie sur une mesure du programme et dit qui décide. <span class="status">Pistes du collectif, pas des engagements du candidat</span></p>
     </div>
     <div class="props">
 {cards()}
@@ -360,7 +361,7 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
       <div><b>27 %</b><span>de chômage au recensement de 2023</span></div>
       <div><b>5,51 €</b><span>le mètre cube d'eau potable en 2022, hors assainissement, plus de deux fois la moyenne nationale</span></div>
       <div><b>28,3 %</b><span>de ménages propriétaires en 2020, contre 63,6 % en moyenne nationale</span></div>
-      <div><b>95,5 %</b><span>des 2,6 millions de visiteurs de l'île accueillis côté néerlandais en 2025</span></div>
+      <div><b>95 %</b><span>des bâtiments de l'île endommagés par l'ouragan Irma en septembre 2017</span></div>
     </div>
     <p class="more-link"><a href="chiffres.html">Tous les chiffres et leurs sources →</a></p>
   </div>
@@ -372,7 +373,7 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
     <div class="head">
       <p class="eyebrow">Agir</p>
       <h2>Quatre gestes utiles avant 2027</h2>
-      <p>Ce site ne collecte aucune donnée : chaque lien mène au service officiel concerné.</p>
+      <p>À Saint-Martin, chaque voix compte, et tout commence par l'inscription sur les listes électorales. Ce site ne collecte aucune donnée : chaque lien mène au service officiel concerné.</p>
     </div>
 {ACT}
     <p class="more-link"><a href="agir.html">Voir l'agenda des Antilles →</a></p>
@@ -447,8 +448,8 @@ PAGES["agir.html"] = ("Agir", "S'inscrire sur les listes électorales, préparer
 """, )
 
 PAGES["english.html"] = ("English", "Independent supporters' site for David Lisnard, run by residents of French Saint-Martin.", hero_page(
-    "English", "Saint-Martin supports David Lisnard",
-    "We are residents of the French side of the island, supporting David Lisnard and his party Nouvelle Énergie for the 2027 French presidential election.") + f"""
+    "English", "Saint-Martin stands with David Lisnard",
+    "We live and work on the French side of the island, from Marigot to Grand-Case, from Quartier-d'Orléans to Sandy Ground. We support David Lisnard and his party Nouvelle Énergie for the 2027 French presidential election, because his priorities meet those of our families: the cost of living, jobs for our young people, housing since Irma and safety in our neighbourhoods.") + f"""
 <section><div class="wrap en">
   <div class="prose">
     <h2>Who we are</h2>
@@ -459,8 +460,9 @@ PAGES["english.html"] = ("English", "Independent supporters' site for David Lisn
     <h2>What we ask for Saint-Martin</h2>
     <ul>
       <li>The right for the Collectivité to adapt national rules to the island.</li>
-      <li>Water as a priority: it costs more than twice the national average.</li>
+      <li>Water as a priority: drinking water alone costs more than twice the national average, before sanitation and fixed charges.</li>
       <li>A priority hiring zone, with 27% unemployment in 2023.</li>
+      <li>Helping families own their home: only 28% do, against 64% nationally, and Irma damaged 95% of the island's buildings in 2017.</li>
       <li>A permanent anti-drug task force based on the island.</li>
     </ul>
     <p>These are proposals from our local group, not commitments from the candidate. <a href="saint-martin.html" lang="fr">Read them in French</a>.</p>
