@@ -284,14 +284,17 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
       </div>
       <p class="fine">Adhésion sur le site officiel · 20 €, 10 € pour les moins de 25 ans</p>
     </div>
-    <figure class="quote">
-      <p class="qlabel">Ce qu'il défend</p>
-      <blockquote>Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut.</blockquote>
-      <figcaption>David Lisnard · <a href="{NE}/notre-programme/" rel="noopener">programme de Nouvelle Énergie</a></figcaption>
-    </figure>
   </div>
   <p class="credit">Photo de David Lisnard : Grégor Sauvagère, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="noopener">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:David_Lisnard_en_2026_(cropped).jpg" rel="noopener">Wikimedia Commons</a></p>
 </div>
+
+<div class="quote-band"><div class="wrap">
+  <figure class="quote">
+    <p class="qlabel">Ce qu'il défend</p>
+    <blockquote>Une révolution de la liberté pour une France forte, juste et rayonnante. Notre pays a besoin d’un sursaut.</blockquote>
+    <figcaption>David Lisnard · <a href="{NE}/notre-programme/" rel="noopener">programme de Nouvelle Énergie</a></figcaption>
+  </figure>
+</div></div>
 
 <section id="pourquoi">
   <div class="wrap">

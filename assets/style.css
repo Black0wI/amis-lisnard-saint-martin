@@ -193,13 +193,13 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;back
 
 /* Accueil : photo de David Lisnard en fond, fondue dans la couleur de la page */
 .hero-photo .hero-bg{position:absolute;inset:0 0 0 auto;width:58%;z-index:-1}
-.hero-photo .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;
+.hero-photo .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%,#000 100%),linear-gradient(0deg,transparent 0%,#000 22%);
   mask-image:linear-gradient(90deg,transparent 0%,#000 38%,#000 100%);
   filter:saturate(.95)}
 .hero-photo .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0%,rgba(246,245,250,.0) 45%),linear-gradient(0deg,var(--bg) 0%,rgba(246,245,250,0) 30%),linear-gradient(180deg,rgba(29,37,122,.10),rgba(74,54,163,.06))}
 .hero-photo::before{display:none}
-.hero-photo .wrap{min-height:640px;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:end}
+.hero-photo .wrap{min-height:620px;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center}
 .hero-photo .hero-text{align-self:center}
 .hero-photo .quote{justify-self:end;max-width:380px;padding:1.4rem 1.5rem 1.2rem;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .hero-photo .quote blockquote{font-size:1.1rem;margin-top:.6rem}
@@ -215,3 +215,11 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;back
   .hero-photo .quote{justify-self:stretch;max-width:none}
   .hero .credit{position:static;padding:0 20px 1rem;text-align:right}
 }
+
+/* Citation sous le héros, hors de la photo */
+.quote-band{position:relative;z-index:1;margin-top:-2.5rem}
+.quote-band .quote{max-width:860px;margin:0 auto;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.4rem 2rem;align-items:baseline;padding:1.8rem 2.2rem}
+.quote-band .qlabel{grid-row:span 2}
+.quote-band blockquote{margin:0;font-size:clamp(1.1rem,1.8vw,1.35rem)}
+.quote-band figcaption{margin-top:.4rem;grid-column:2}
+@media (max-width:1000px){.quote-band{margin-top:0}.quote-band .quote{grid-template-columns:1fr;padding:1.4rem 1.5rem}.quote-band .qlabel{grid-row:auto}.quote-band figcaption{grid-column:1}}
