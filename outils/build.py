@@ -131,7 +131,7 @@ PROPS = [
          qui="L'État, par une révision de la loi organique statutaire."),
     dict(n="Eau", titre="L'eau potable, chantier prioritaire",
          court="L'eau coûte plus de deux fois la moyenne nationale et près d'un tiers se perd dans le réseau.",
-         constat=f"L'eau coûtait 5,51 €/m³ en 2022, contre 2,11 €/m³ en moyenne nationale en 2021, et environ 30 % se perd dans les fuites du réseau. {s('rup', 'Fiche RUP')}",
+         constat=f"L'eau potable coûtait 5,51 €/m³ en 2022, contre 2,11 €/m³ en moyenne nationale en 2021. Ces deux prix moyens portent sur l'eau potable seule : l'assainissement, l'abonnement et la tranche haute (au-delà de 30 m³ par trimestre) s'y ajoutent sur la facture. Environ 30 % de l'eau se perd dans les fuites du réseau. {s('rup', 'Fiche RUP')}",
          programme=f"Le programme national ne contient pas de mesure dédiée à l'eau. La piste s'appuie sur la décentralisation et l'allègement normatif qu'il défend. {s('axe3')}",
          piste="Faire du réseau et du dessalement un chantier prioritaire, avec un objectif public de réduction des pertes et un suivi publié chaque année.",
          qui="La Collectivité et son établissement des eaux, avec le soutien de l'État."),
@@ -239,7 +239,7 @@ CHIFFRES = [
     ("Emploi", "8 119", "Salariés fin 2025, un record (+5,3 % sur un an)", "iedom"),
     ("Tourisme", "2,6 millions", "Visiteurs sur l'ensemble de l'île en 2025 (+15,7 %)", "iedom"),
     ("Tourisme", "95,5 %", "Part de ces visiteurs accueillis côté néerlandais", "iedom"),
-    ("Eau", "5,51 €/m³", "Prix de l'eau en 2022, contre 2,11 €/m³ en moyenne nationale en 2021", "rup"),
+    ("Eau potable", "5,51 €/m³", "Prix moyen de l'eau potable seule en 2022, hors assainissement et abonnement, contre 2,11 €/m³ en moyenne nationale en 2021", "rup"),
     ("Eau", "≈ 30 %", "Part de l'eau perdue dans les fuites du réseau en 2022", "rup"),
     ("Logement", "28,3 %", "Ménages propriétaires en 2020, contre 63,6 % en moyenne nationale", "rup"),
     ("Logement", "13,9 %", "Logements vacants en 2018", "rup"),
@@ -349,7 +349,7 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
     </div>
     <div class="keys">
       <div><b>27 %</b><span>de chômage au recensement de 2023</span></div>
-      <div><b>5,51 €</b><span>le mètre cube d'eau en 2022, plus de deux fois la moyenne nationale</span></div>
+      <div><b>5,51 €</b><span>le mètre cube d'eau potable en 2022, hors assainissement, plus de deux fois la moyenne nationale</span></div>
       <div><b>28,3 %</b><span>de ménages propriétaires en 2020, contre 63,6 % en moyenne nationale</span></div>
       <div><b>95,5 %</b><span>des 2,6 millions de visiteurs de l'île accueillis côté néerlandais en 2025</span></div>
     </div>
