@@ -357,7 +357,8 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
   </div>
 </section>
 
-<section class="alt">
+<section class="alt island">
+  <div class="island-bg" aria-hidden="true"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Fort_Louis_Marigot_View_%286546074117%29.jpg/1280px-Fort_Louis_Marigot_View_%286546074117%29.jpg" width="1280" height="960" alt="" loading="lazy"></div>
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Agir</p>
@@ -367,6 +368,7 @@ PAGES["index.html"] = ("Accueil", "Site indépendant de soutien à David Lisnard
 {ACT}
     <p class="more-link"><a href="agir.html">Voir l'agenda des Antilles →</a></p>
   </div>
+  <p class="credit">La marina de Marigot vue du fort Louis : Richie Diesterheft, <a href="https://creativecommons.org/licenses/by-sa/2.0/deed.fr" rel="noopener">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Fort_Louis_Marigot_View_(6546074117).jpg" rel="noopener">Wikimedia Commons</a> (floutée et teintée)</p>
 </section>
 """)
 
@@ -471,7 +473,7 @@ PAGES["mentions-legales.html"] = ("Mentions légales", "Mentions légales, hébe
   <p>Ce site ne dépose aucun cookie, n'utilise aucun outil de mesure d'audience et ne contient aucun formulaire. Il ne recueille aucune donnée personnelle.</p>
   <p>Trois services tiers sont appelés lors de la consultation : Google Fonts, pour les polices, Wikimedia Commons, pour les photos de l'accueil, et le fichier public de l'agenda de Nouvelle Énergie sur la page Agir. Comme tout serveur web, ils reçoivent l'adresse IP du visiteur. L'hébergeur GitHub peut conserver des journaux techniques de connexion.</p>
   <h2>Sources et droits</h2>
-  <p>Les citations et mesures reprises du programme de Nouvelle Énergie renvoient chacune à leur page d'origine. Les chiffres sur Saint-Martin proviennent de l'IEDOM et de la Commission européenne. La photo de David Lisnard en page d'accueil est de Grégor Sauvagère (octobre 2026), publiée sous licence CC BY-SA 4.0 sur Wikimedia Commons. La vue de Marigot depuis Bellevue est de Thierry Pierrard, sous la même licence, floutée et teintée pour servir de fond. Les textes propres au collectif peuvent être repris librement en citant le site.</p>
+  <p>Les citations et mesures reprises du programme de Nouvelle Énergie renvoient chacune à leur page d'origine. Les chiffres sur Saint-Martin proviennent de l'IEDOM et de la Commission européenne. La photo de David Lisnard en page d'accueil est de Grégor Sauvagère (octobre 2026), publiée sous licence CC BY-SA 4.0 sur Wikimedia Commons. La vue de Marigot depuis Bellevue est de Thierry Pierrard, sous la même licence, floutée et teintée pour servir de fond, de même que la vue de la marina depuis le fort Louis, de Richie Diesterheft (licence CC BY-SA 2.0). Les textes propres au collectif peuvent être repris librement en citant le site.</p>
   <h2>Règles électorales</h2>
   <p>Le site n'engage aucune dépense et ne recourt à aucune publicité payante. Aucun nouveau contenu de propagande n'y est publié à partir de zéro heure la veille d'un scrutin.</p>
 </div></div></section>
