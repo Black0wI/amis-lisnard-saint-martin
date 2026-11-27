@@ -4,27 +4,18 @@
    Style : sobre et moderne, fond blanc, halos dégradés discrets, titres Montserrat serrés, texte Inter. */
 :root{
   --navy:#1D257A; --navy-deep:#0F1752; --violet:#4A36A3; --gold:#B0AD85; --lavender:#E7E5F0;
-  --bg:#FFFFFF; --soft:#F7F7FB; --card:#FFFFFF; --fg:#171B3E; --muted:#5A5F78; --faint:#8A8EA3; --line:#E7E6F0;
-  --heading:#14183D; --accent:#4A36A3; --link:#2E2F8F;
-  --btn-bg:#14183D; --btn-fg:#FFFFFF;
+  --bg:#F6F5FA; --soft:#EEECF6; --card:#FFFFFF; --fg:#171B3E; --muted:#555A73; --faint:#80849B; --line:#E2E0EC;
+  --heading:#1D257A; --accent:#4A36A3; --link:#1D257A;
+  --btn-bg:#1D257A; --btn-fg:#FFFFFF;
   --shadow:0 1px 2px rgba(20,24,61,.04),0 8px 24px -8px rgba(20,24,61,.12);
   --shadow-lg:0 2px 4px rgba(20,24,61,.04),0 24px 60px -20px rgba(29,37,122,.28);
-  --grad:linear-gradient(100deg,#1D257A 0%,#4A36A3 45%,#9C9670 100%);
-  --halo-1:rgba(74,54,163,.22); --halo-2:rgba(176,173,133,.32); --halo-3:rgba(29,37,122,.16);
+  --grad:linear-gradient(100deg,#1D257A 0%,#4A36A3 70%,#7E6FC4 100%);
+  --halo-1:rgba(74,54,163,.14); --halo-2:rgba(176,173,133,.30); --halo-3:rgba(29,37,122,.10);
   --head:"Montserrat",Arial,"Helvetica Neue",sans-serif;
   --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --r:16px;
   color-scheme:light;
 }
-@media (prefers-color-scheme:dark){:root{
-  --bg:#0A0D26; --soft:#0F1333; --card:#141938; --fg:#E6E6F0; --muted:#A9ADC4; --faint:#7F84A0; --line:#232A55;
-  --heading:#F4F4FA; --accent:#B5A8F2; --link:#C9C6F5;
-  --btn-bg:#F4F4FA; --btn-fg:#0F1752;
-  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -8px rgba(0,0,0,.5);
-  --shadow-lg:0 2px 4px rgba(0,0,0,.3),0 24px 60px -20px rgba(0,0,0,.6);
-  --grad:linear-gradient(100deg,#9FA6F2 0%,#B5A8F2 45%,#D8D4A8 100%);
-  --halo-1:rgba(74,54,163,.35); --halo-2:rgba(176,173,133,.16); --halo-3:rgba(29,37,122,.45);
-  color-scheme:dark}}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -41,7 +32,8 @@ h1,h2{font-weight:600;letter-spacing:-.025em;line-height:1.1}
 h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
 h3{font-weight:600;font-size:1.05rem;line-height:1.35;letter-spacing:-.01em}
 p{margin:0}
-.eyebrow{font-size:.8rem;font-weight:600;color:var(--accent)}
+.eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.head .eyebrow::before,.intro .eyebrow::before,.hero .eyebrow::before{content:"";display:inline-block;width:22px;height:3px;border-radius:2px;background:var(--gold);vertical-align:middle;margin-right:.6rem}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* Bandeau d'indépendance : exigé par la charte de partage de Nouvelle Énergie (point 2) */
@@ -94,7 +86,7 @@ nav a[aria-current="page"]{font-weight:600}
 .intro .lead{font-size:1.06rem;max-width:62ch;color:var(--muted)}
 
 section{padding-block:5.5rem}
-section.alt{background:var(--soft);border-block:1px solid var(--line)}
+section.alt{background:#F4F2EA;border-block:1px solid #E6E2D3}
 .head{display:grid;gap:.8rem;margin-bottom:2.8rem;max-width:66ch}
 .head p:not(.eyebrow){color:var(--muted);font-size:1.02rem}
 .more-link{margin-top:2rem;font-weight:600;font-size:.9rem}
@@ -173,7 +165,7 @@ td.fig{font-family:var(--head);font-weight:600;font-size:1.1rem;color:var(--head
 
 .en{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:start}
 
-footer{background:var(--soft);border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+footer{background:#EEECF6;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
 footer .wrap{padding-block:3.5rem;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:3rem}
 footer a{color:var(--link)}
 footer h3{font-size:.95rem;margin-bottom:.8rem}
